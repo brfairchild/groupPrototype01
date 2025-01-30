@@ -1,24 +1,16 @@
 [gd_scene load_steps=4 format=3 uid="uid://b18otcyh4xu5c"]
 
-[ext_resource type="PackedScene" uid="uid://c2gl16ylmx3qb" path="res://main_character.tscn" id="1_10ri3"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_oujax"]
-
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_rinpu"]
-data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+[ext_resource type="PackedScene" uid="uid://c2gl16ylmx3qb" path="res://Scenes/main_character.tscn" id="1_10ri3"]
+[ext_resource type="Script" path="res://devMap/dev_map.gd" id="1_45w8d"]
+[ext_resource type="PackedScene" uid="uid://ciq53a7k0v2rl" path="res://Scenes/house.tscn" id="3_2tx5t"]
 
 [node name="DevMap" type="Node3D"]
+script = ExtResource("1_45w8d")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+omni_range = 24.4913
 
 [node name="MainCharacter" parent="." instance=ExtResource("1_10ri3")]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(12.7013, 0, 0, 0, 1, 0, 0, 0, 17.6414, 0, 0, 0)
-mesh = SubResource("BoxMesh_oujax")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_rinpu")
+[node name="House" parent="." instance=ExtResource("3_2tx5t")]

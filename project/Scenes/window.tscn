@@ -1,0 +1,82 @@
+[gd_scene load_steps=3 format=3 uid="uid://dne6jme2n8fv"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_mpgfl"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_cekiy"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[node name="Window" type="Node3D"]
+
+[node name="Window" type="MeshInstance3D" parent="."]
+transform = Transform3D(-5.44093e-08, 0.460134, 8.47858e-08, 1.24474, 2.01033e-08, 0.000947946, -0.000608322, -2.01229e-08, 1.93967, -0.246616, 0.499742, 0.147723)
+mesh = SubResource("BoxMesh_mpgfl")
+
+[node name="BRWBody" type="StaticBody3D" parent="Window"]
+
+[node name="BRWCol" type="CollisionShape3D" parent="Window/BRWBody"]
+shape = SubResource("ConcavePolygonShape3D_cekiy")
+
+[node name="Window2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-3.89376e-08, 0.460134, 8.4774e-08, 0.890788, 2.01033e-08, 0.000947814, -0.000435341, -2.01229e-08, 1.9394, -0.246616, 2.85643, 0.147723)
+mesh = SubResource("BoxMesh_mpgfl")
+
+[node name="BRWBody" type="StaticBody3D" parent="Window2"]
+
+[node name="BRWCol" type="CollisionShape3D" parent="Window2/BRWBody"]
+shape = SubResource("ConcavePolygonShape3D_cekiy")
+
+[node name="Window3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.66438e-09, 0.460134, 8.47375e-08, 0.106709, 2.01033e-08, 0.000947406, -5.215e-05, -2.01229e-08, 1.93857, -0.246616, 1.75642, 0.147723)
+mesh = SubResource("BoxMesh_mpgfl")
+
+[node name="BRWBody" type="StaticBody3D" parent="Window3"]
+
+[node name="BRWCol" type="CollisionShape3D" parent="Window3/BRWBody"]
+shape = SubResource("ConcavePolygonShape3D_cekiy")
+
+[node name="Window4" type="MeshInstance3D" parent="."]
+transform = Transform3D(4.66438e-09, 0.460134, 0, 4.66438e-09, -8.79172e-16, 1.35965, -0.106709, 2.01131e-08, 5.94324e-08, -0.246616, 1.75642, 0.147723)
+mesh = SubResource("BoxMesh_mpgfl")
+skeleton = NodePath("../..")
+
+[node name="BRWBody" type="StaticBody3D" parent="Window4"]
+
+[node name="BRWCol" type="CollisionShape3D" parent="Window4/BRWBody"]
+shape = SubResource("ConcavePolygonShape3D_cekiy")
+
+[node name="Window5" type="MeshInstance3D" parent="."]
+transform = Transform3D(-5.44093e-08, 0.460134, 8.47858e-08, 1.24474, 2.01033e-08, 0.000947946, -0.000608322, -2.01229e-08, 1.93967, -0.246616, 4.88585, 0.147723)
+mesh = SubResource("BoxMesh_mpgfl")
+
+[node name="BRWBody" type="StaticBody3D" parent="Window5"]
+
+[node name="BRWCol" type="CollisionShape3D" parent="Window5/BRWBody"]
+shape = SubResource("ConcavePolygonShape3D_cekiy")
+
+[node name="Window6" type="MeshInstance3D" parent="."]
+transform = Transform3D(-3.89376e-08, 0.460134, 8.4774e-08, 0.890788, 2.01033e-08, 0.000947814, -0.000435341, -2.01229e-08, 1.9394, -0.246616, 7.24254, 0.147723)
+mesh = SubResource("BoxMesh_mpgfl")
+
+[node name="BRWBody" type="StaticBody3D" parent="Window6"]
+
+[node name="BRWCol" type="CollisionShape3D" parent="Window6/BRWBody"]
+shape = SubResource("ConcavePolygonShape3D_cekiy")
+
+[node name="Window7" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.66438e-09, 0.460134, 8.47375e-08, 0.106709, 2.01033e-08, 0.000947406, -5.215e-05, -2.01229e-08, 1.93857, -0.246616, 6.14253, 0.147723)
+mesh = SubResource("BoxMesh_mpgfl")
+
+[node name="BRWBody" type="StaticBody3D" parent="Window7"]
+
+[node name="BRWCol" type="CollisionShape3D" parent="Window7/BRWBody"]
+shape = SubResource("ConcavePolygonShape3D_cekiy")
+
+[node name="Window8" type="MeshInstance3D" parent="."]
+transform = Transform3D(4.66438e-09, 0.460134, 0, 4.66438e-09, -8.79172e-16, 1.35965, -0.106709, 2.01131e-08, 5.94324e-08, -0.246616, 6.14253, 0.147723)
+mesh = SubResource("BoxMesh_mpgfl")
+skeleton = NodePath("../..")
+
+[node name="BRWBody" type="StaticBody3D" parent="Window8"]
+
+[node name="BRWCol" type="CollisionShape3D" parent="Window8/BRWBody"]
+shape = SubResource("ConcavePolygonShape3D_cekiy")
