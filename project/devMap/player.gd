@@ -7,6 +7,7 @@ const MOUSE_SENSITIVITY_y = 0.1
 @export var camera: NodePath
 var rotation_y = 0.0
 var camera_pitch = 0.0
+var is_teleported_up = false  # Flag to track teleportation state
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -22,6 +23,10 @@ func _input(event: InputEvent) -> void:
 		var camera_node = get_node(camera) as Camera3D
 		if camera_node:
 			camera_node.rotation_degrees.x = camera_pitch
+	
+	# Check if the "act_cam" action is pressed for teleportation
+	if Input.is_action_just_pressed("act_cam"):
+		toggle_teleport()
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
@@ -42,3 +47,12 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+
+# Toggle teleportation up or down by 500 units
+func toggle_teleport() -> void:
+	if is_teleported_up:
+		position.y -= 5  # Move down
+	else:
+		position.y += 5  # Move up
+
+	is_teleported_up = !is_teleported_up  # Toggle state
