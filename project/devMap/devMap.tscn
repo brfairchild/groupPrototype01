@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://b18otcyh4xu5c"]
+[gd_scene load_steps=5 format=3 uid="uid://b18otcyh4xu5c"]
 
 [ext_resource type="PackedScene" uid="uid://c2gl16ylmx3qb" path="res://Scenes/main_character.tscn" id="1_10ri3"]
 [ext_resource type="Script" path="res://devMap/dev_map.gd" id="1_45w8d"]
 [ext_resource type="PackedScene" uid="uid://ciq53a7k0v2rl" path="res://Scenes/house.tscn" id="3_2tx5t"]
+[ext_resource type="PackedScene" uid="uid://bhmvyfu8g3unk" path="res://Scenes/Light_Switch.tscn" id="4_pu6hl"]
 
 [node name="DevMap" type="Node3D"]
 script = ExtResource("1_45w8d")
@@ -14,3 +15,7 @@ omni_range = 24.4913
 [node name="MainCharacter" parent="." instance=ExtResource("1_10ri3")]
 
 [node name="House" parent="." instance=ExtResource("3_2tx5t")]
+
+[node name="Node3D" parent="." instance=ExtResource("4_pu6hl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 2, 6)
+prompt_message = "HAHAHAHAA"

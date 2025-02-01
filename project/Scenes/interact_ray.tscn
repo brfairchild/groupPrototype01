@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvwy7gilp136l"]
+
+[ext_resource type="Script" path="res://Interactable/interact_ray.gd" id="1_stxg6"]
+
+[node name="RayCast3D" type="RayCast3D"]
+target_position = Vector3(0, 0, -4)
+script = ExtResource("1_stxg6")

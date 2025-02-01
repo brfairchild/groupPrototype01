@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://c2gl16ylmx3qb"]
+[gd_scene load_steps=5 format=3 uid="uid://c2gl16ylmx3qb"]
 
 [ext_resource type="Script" path="res://devMap/player.gd" id="1_iborm"]
+[ext_resource type="PackedScene" uid="uid://dvwy7gilp136l" path="res://Scenes/interact_ray.tscn" id="2_wewiw"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_lo6xf"]
 
@@ -22,3 +23,6 @@ shape = SubResource("ConvexPolygonShape3D_jwgdj")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.572358, 0)
 
 [node name="Head" type="Camera3D" parent="Neck"]
+
+[node name="InteractRay" parent="." instance=ExtResource("2_wewiw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49349, 0.12279)
