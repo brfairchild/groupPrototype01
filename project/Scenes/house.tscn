@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://ciq53a7k0v2rl"]
+[gd_scene load_steps=5 format=3 uid="uid://ciq53a7k0v2rl"]
 
 [ext_resource type="PackedScene" uid="uid://dne6jme2n8fv" path="res://Scenes/window.tscn" id="1_s3bbj"]
+[ext_resource type="PackedScene" uid="uid://c4bhsjubp248d" path="res://Scenes/door.tscn" id="1_sc48b"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_akcad"]
 
@@ -37,6 +38,9 @@ mesh = SubResource("BoxMesh_akcad")
 
 [node name="GCol" type="CollisionShape3D" parent="CurrentHouse/GarageFloor/GBody"]
 shape = SubResource("ConcavePolygonShape3D_b1hgx")
+
+[node name="Door" parent="CurrentHouse" instance=ExtResource("1_sc48b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.8751, 0.469047, -11.8144)
 
 [node name="FutureHouse" type="Node3D" parent="."]
 
