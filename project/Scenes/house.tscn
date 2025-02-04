@@ -42,6 +42,15 @@ shape = SubResource("ConcavePolygonShape3D_b1hgx")
 [node name="Door" parent="CurrentHouse" instance=ExtResource("1_sc48b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.8751, 0.469047, -11.8144)
 
+[node name="Door2" parent="CurrentHouse" instance=ExtResource("1_sc48b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.8751, 0.469047, 1.44246)
+
+[node name="Door3" parent="CurrentHouse" instance=ExtResource("1_sc48b")]
+transform = Transform3D(-4.29736e-08, 0, 0.983122, 0, 0.983122, 0, -0.983122, 0, -4.29736e-08, 7.43665, 0.469047, -12.9642)
+
+[node name="Door4" parent="CurrentHouse" instance=ExtResource("1_sc48b")]
+transform = Transform3D(-4.29736e-08, 0, 0.983122, 0, 0.983122, 0, -0.983122, 0, -4.29736e-08, 22.0685, 0.469047, -12.9642)
+
 [node name="FutureHouse" type="Node3D" parent="."]
 
 [node name="MiddleFloor" type="MeshInstance3D" parent="FutureHouse"]
@@ -119,7 +128,7 @@ mesh = SubResource("BoxMesh_akcad")
 shape = SubResource("ConcavePolygonShape3D_b1hgx")
 
 [node name="BedroomWall3" type="MeshInstance3D" parent="Walls"]
-transform = Transform3D(-3.57905e-07, 0.423475, -1.4988e-07, 8.1879, 1.85016e-08, -0.00167573, -0.00400155, -1.85197e-08, -3.42885, -25.4959, 4.0415, 4.01664)
+transform = Transform3D(-3.57898e-07, 0.423475, -1.43626e-07, 8.18773, 1.85016e-08, -0.0016058, -0.00400147, -1.85197e-08, -3.28577, -25.4959, 4.0415, 4.08274)
 mesh = SubResource("BoxMesh_akcad")
 
 [node name="BRWBody" type="StaticBody3D" parent="Walls/BedroomWall3"]
@@ -128,7 +137,7 @@ mesh = SubResource("BoxMesh_akcad")
 shape = SubResource("ConcavePolygonShape3D_b1hgx")
 
 [node name="BedroomWall4" type="MeshInstance3D" parent="Walls"]
-transform = Transform3D(-1.24982e-09, 1.85106e-08, 11.5004, 8.19114, 0.0014782, 0, -0.0285924, 0.423472, -5.027e-07, -19.5805, 4.0415, -3.2496)
+transform = Transform3D(-1.24982e-09, 1.85106e-08, 11.5004, 8.19114, 0.0014782, 0, -0.0285924, 0.423472, -5.027e-07, -19.5798, 4.018, -3.22593)
 mesh = SubResource("BoxMesh_akcad")
 
 [node name="BRWBody" type="StaticBody3D" parent="Walls/BedroomWall4"]
@@ -163,6 +172,141 @@ mesh = SubResource("BoxMesh_akcad")
 [node name="BRWCol" type="CollisionShape3D" parent="Walls/BedroomWall7/BRWBody"]
 shape = SubResource("ConcavePolygonShape3D_b1hgx")
 
+[node name="BedroomWall8" type="MeshInstance3D" parent="Walls"]
+transform = Transform3D(1.56452e-14, 1.85107e-08, 4.09907, 8.18828, -1.85107e-08, 0, 3.57921e-07, 0.423475, -1.79176e-07, -23.3136, 4.0415, -16.3996)
+mesh = SubResource("BoxMesh_akcad")
+
+[node name="BRWBody" type="StaticBody3D" parent="Walls/BedroomWall8"]
+
+[node name="BRWCol" type="CollisionShape3D" parent="Walls/BedroomWall8/BRWBody"]
+shape = SubResource("ConcavePolygonShape3D_b1hgx")
+
+[node name="BedroomWall9" type="MeshInstance3D" parent="Walls"]
+transform = Transform3D(1.56452e-14, 1.85107e-08, 7.1542, 8.18828, -1.85107e-08, 0, 3.57921e-07, 0.423475, -3.1272e-07, -15.8666, 4.0415, -16.3996)
+mesh = SubResource("BoxMesh_akcad")
+
+[node name="BRWBody" type="StaticBody3D" parent="Walls/BedroomWall9"]
+
+[node name="BRWCol" type="CollisionShape3D" parent="Walls/BedroomWall9/BRWBody"]
+shape = SubResource("ConcavePolygonShape3D_b1hgx")
+
+[node name="BedroomWall10" type="MeshInstance3D" parent="Walls"]
+transform = Transform3D(1.56452e-14, 1.85107e-08, 7.1542, 8.18828, -1.85107e-08, 0, 3.57921e-07, 0.423475, -3.1272e-07, -6.83966, 4.0415, -16.3996)
+mesh = SubResource("BoxMesh_akcad")
+
+[node name="BRWBody" type="StaticBody3D" parent="Walls/BedroomWall10"]
+
+[node name="BRWCol" type="CollisionShape3D" parent="Walls/BedroomWall10/BRWBody"]
+shape = SubResource("ConcavePolygonShape3D_b1hgx")
+
+[node name="BedroomWall11" type="MeshInstance3D" parent="Walls"]
+transform = Transform3D(-3.57921e-07, 0.423475, -1.65241e-07, 8.18828, 1.85016e-08, -0.00184748, -0.00400173, -1.85197e-08, -3.78028, -13.9458, 4.05258, -14.5771)
+mesh = SubResource("BoxMesh_akcad")
+
+[node name="BRWBody" type="StaticBody3D" parent="Walls/BedroomWall11"]
+
+[node name="BRWCol" type="CollisionShape3D" parent="Walls/BedroomWall11/BRWBody"]
+shape = SubResource("ConcavePolygonShape3D_b1hgx")
+
+[node name="BedroomWall12" type="MeshInstance3D" parent="Walls"]
+transform = Transform3D(-3.58172e-07, 0.423475, -8.59491e-07, 8.19403, 1.85016e-08, -0.00960952, -0.00400454, -1.85197e-08, -19.6629, 6.38319, 4.0415, -4.15732)
+mesh = SubResource("BoxMesh_akcad")
+
+[node name="BRWBody" type="StaticBody3D" parent="Walls/BedroomWall12"]
+
+[node name="BRWCol" type="CollisionShape3D" parent="Walls/BedroomWall12/BRWBody"]
+shape = SubResource("ConcavePolygonShape3D_b1hgx")
+
+[node name="BedroomWall13" type="MeshInstance3D" parent="Walls"]
+transform = Transform3D(1.56452e-14, 1.85107e-08, 21.1183, 8.18828, -1.85107e-08, 0, 3.57921e-07, 0.423475, -9.23111e-07, 12.9167, 4.0415, -16.3996)
+mesh = SubResource("BoxMesh_akcad")
+
+[node name="BRWBody" type="StaticBody3D" parent="Walls/BedroomWall13"]
+
+[node name="BRWCol" type="CollisionShape3D" parent="Walls/BedroomWall13/BRWBody"]
+shape = SubResource("ConcavePolygonShape3D_b1hgx")
+
+[node name="BedroomWall14" type="MeshInstance3D" parent="Walls"]
+transform = Transform3D(-3.57903e-07, 0.423475, -1.48336e-07, 8.18786, 1.85016e-08, -0.00165847, -0.00400153, -1.85197e-08, -3.39353, -13.7251, 4.0415, 3.94351)
+mesh = SubResource("BoxMesh_akcad")
+
+[node name="BRWBody" type="StaticBody3D" parent="Walls/BedroomWall14"]
+
+[node name="BRWCol" type="CollisionShape3D" parent="Walls/BedroomWall14/BRWBody"]
+shape = SubResource("ConcavePolygonShape3D_b1hgx")
+
+[node name="BedroomWall15" type="MeshInstance3D" parent="Walls"]
+transform = Transform3D(1.56452e-14, 1.88018e-08, 13.008, 8.18828, -1.88018e-08, 0, 3.57921e-07, 0.430136, -5.68596e-07, 14.7607, 4.01864, -12.8614)
+mesh = SubResource("BoxMesh_akcad")
+
+[node name="BRWBody" type="StaticBody3D" parent="Walls/BedroomWall15"]
+
+[node name="BRWCol" type="CollisionShape3D" parent="Walls/BedroomWall15/BRWBody"]
+shape = SubResource("ConcavePolygonShape3D_b1hgx")
+
+[node name="BedroomWall16" type="MeshInstance3D" parent="Walls"]
+transform = Transform3D(-3.582e-07, 0.423475, -9.9853e-07, 8.19468, 1.85016e-08, -0.011164, -0.00400486, -1.85197e-08, -22.8437, 23.1358, 4.0415, -5.75468)
+mesh = SubResource("BoxMesh_akcad")
+
+[node name="BRWBody" type="StaticBody3D" parent="Walls/BedroomWall16"]
+
+[node name="BRWCol" type="CollisionShape3D" parent="Walls/BedroomWall16/BRWBody"]
+shape = SubResource("ConcavePolygonShape3D_b1hgx")
+
+[node name="BedroomWall17" type="MeshInstance3D" parent="Walls"]
+transform = Transform3D(1.56452e-14, 1.88018e-08, 7.47335, 8.18828, -1.88018e-08, 0, 3.57921e-07, 0.430136, -3.2667e-07, 10.0351, 4.01864, -5.61633)
+mesh = SubResource("BoxMesh_akcad")
+
+[node name="BRWBody" type="StaticBody3D" parent="Walls/BedroomWall17"]
+
+[node name="BRWCol" type="CollisionShape3D" parent="Walls/BedroomWall17/BRWBody"]
+shape = SubResource("ConcavePolygonShape3D_b1hgx")
+
+[node name="BedroomWall18" type="MeshInstance3D" parent="Walls"]
+transform = Transform3D(-3.57921e-07, -0.430136, 0, 8.18828, -1.88018e-08, 0, 0, 0, 7.47335, 13.5532, 4.01864, -9.16206)
+mesh = SubResource("BoxMesh_akcad")
+
+[node name="BRWBody" type="StaticBody3D" parent="Walls/BedroomWall18"]
+
+[node name="BRWCol" type="CollisionShape3D" parent="Walls/BedroomWall18/BRWBody"]
+shape = SubResource("ConcavePolygonShape3D_b1hgx")
+
+[node name="BedroomWall19" type="MeshInstance3D" parent="Walls"]
+transform = Transform3D(-1.27831e-09, 1.89326e-08, 16.9768, 8.37787, 0.0015119, 0, -0.0292443, 0.433126, -7.42079e-07, 14.8156, 4.0415, 5.50997)
+mesh = SubResource("BoxMesh_akcad")
+
+[node name="BRWBody" type="StaticBody3D" parent="Walls/BedroomWall19"]
+
+[node name="BRWCol" type="CollisionShape3D" parent="Walls/BedroomWall19/BRWBody"]
+shape = SubResource("ConcavePolygonShape3D_b1hgx")
+
+[node name="BedroomWall20" type="MeshInstance3D" parent="Walls"]
+transform = Transform3D(-3.58048e-07, 0.423475, -5.027e-07, 8.19118, 1.85016e-08, -0.00562043, -0.00400315, -1.85197e-08, -11.5004, 6.58755, 4.0415, 10.814)
+mesh = SubResource("BoxMesh_akcad")
+
+[node name="BRWBody" type="StaticBody3D" parent="Walls/BedroomWall20"]
+
+[node name="BRWCol" type="CollisionShape3D" parent="Walls/BedroomWall20/BRWBody"]
+shape = SubResource("ConcavePolygonShape3D_b1hgx")
+
+[node name="BedroomWall21" type="MeshInstance3D" parent="Walls"]
+transform = Transform3D(1.56452e-14, 1.88018e-08, 4.50244, 8.18828, -1.88018e-08, 0, 3.57921e-07, 0.430136, -1.96808e-07, 4.53258, 4.01864, 16.4457)
+mesh = SubResource("BoxMesh_akcad")
+
+[node name="BRWBody" type="StaticBody3D" parent="Walls/BedroomWall21"]
+
+[node name="BRWCol" type="CollisionShape3D" parent="Walls/BedroomWall21/BRWBody"]
+shape = SubResource("ConcavePolygonShape3D_b1hgx")
+
+[node name="BedroomWall22" type="MeshInstance3D" parent="Walls"]
+transform = Transform3D(1.56452e-14, 1.88018e-08, 5.16643, 8.18828, -1.88018e-08, 0, 3.57921e-07, 0.430136, -2.25832e-07, -5.83404, 4.01864, 16.4457)
+mesh = SubResource("BoxMesh_akcad")
+
+[node name="BRWBody" type="StaticBody3D" parent="Walls/BedroomWall22"]
+
+[node name="BRWCol" type="CollisionShape3D" parent="Walls/BedroomWall22/BRWBody"]
+shape = SubResource("ConcavePolygonShape3D_b1hgx")
+
 [node name="Windows" type="Node3D" parent="."]
 
 [node name="Window" parent="Windows" instance=ExtResource("1_s3bbj")]
@@ -173,3 +317,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.2517, 0.523908, 1.35866)
 
 [node name="Window3" parent="Windows" instance=ExtResource("1_s3bbj")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -20.5016, 0.523908, -16.6043)
+
+[node name="Window4" parent="Windows" instance=ExtResource("1_s3bbj")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11.4943, 0.479268, -16.6046)
+
+[node name="Window5" parent="Windows" instance=ExtResource("1_s3bbj")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.5, 0.523908, -16.6043)
+
+[node name="Window6" parent="Windows" instance=ExtResource("1_s3bbj")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.644321, 0.523908, -16.6021)
+
+[node name="Window7" parent="Windows" instance=ExtResource("1_s3bbj")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.26725, 0.523908, -16.6021)
+
+[node name="Window8" parent="Windows" instance=ExtResource("1_s3bbj")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.5, 0.523908, 16.105)
+
+[node name="Window9" parent="Windows" instance=ExtResource("1_s3bbj")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.644321, 0.523908, 16.1072)
+
+[node name="Window10" parent="Windows" instance=ExtResource("1_s3bbj")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.26725, 0.523908, 16.1072)
