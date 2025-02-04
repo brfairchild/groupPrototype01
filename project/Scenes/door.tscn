@@ -43,7 +43,7 @@ skeleton = NodePath("../..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Knob/BaseMesh/BaseBody"]
 shape = SubResource("CylinderShape3D_r3vfp")
 
-[node name="KnobMesh" type="MeshInstance3D" parent="Knob"]
+[node name="KnobMesh" type="MeshInstance3D" parent="Knob" groups=["Knobs"]]
 transform = Transform3D(0.237545, 0, 0, 0, 0.251, 0, 0, 0, 0.191, 0.265772, 1.57059, -0.698511)
 material_override = ExtResource("2_6x24a")
 mesh = SubResource("SphereMesh_4ejgy")
@@ -53,7 +53,7 @@ mesh = SubResource("SphereMesh_4ejgy")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Knob/KnobMesh/KnobBody"]
 shape = SubResource("SphereShape3D_56y7i")
 
-[node name="KnobMesh2" type="MeshInstance3D" parent="Knob"]
+[node name="KnobMesh2" type="MeshInstance3D" parent="Knob" groups=["Knobs"]]
 transform = Transform3D(0.237545, 0, 0, 0, 0.251, 0, 0, 0, 0.191, -0.268588, 1.57059, -0.698511)
 material_override = ExtResource("2_6x24a")
 mesh = SubResource("SphereMesh_4ejgy")
