@@ -1,9 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://b18otcyh4xu5c"]
+[gd_scene load_steps=12 format=3 uid="uid://b18otcyh4xu5c"]
 
 [ext_resource type="PackedScene" uid="uid://c2gl16ylmx3qb" path="res://Scenes/main_character.tscn" id="1_10ri3"]
 [ext_resource type="Script" path="res://devMap/dev_map.gd" id="1_45w8d"]
 [ext_resource type="PackedScene" uid="uid://ciq53a7k0v2rl" path="res://Scenes/house.tscn" id="3_2tx5t"]
+[ext_resource type="Script" path="res://devMap/light_2.gd" id="3_8b7k5"]
 [ext_resource type="PackedScene" uid="uid://bhmvyfu8g3unk" path="res://Scenes/Light_Switch.tscn" id="4_pu6hl"]
+[ext_resource type="Script" path="res://devMap/light_3.gd" id="4_wy4vt"]
+[ext_resource type="Script" path="res://devMap/light_1.gd" id="5_pdfly"]
+[ext_resource type="PackedScene" uid="uid://bgkplessn3gfo" path="res://Bed.tscn" id="8_2mq2g"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_lb0al"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -27,15 +31,78 @@ omni_range = 37.2321
 
 [node name="House" parent="." instance=ExtResource("3_2tx5t")]
 
-[node name="Light_Switch" parent="." instance=ExtResource("4_pu6hl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.43335, 2, 6)
+[node name="Light_Switch1" parent="." instance=ExtResource("4_pu6hl")]
+transform = Transform3D(0.175, 0, 0, 0, 0.53, 0, 0, 0, 0.205, 6.1748, 2, 3.06265)
+visible = false
 
-[node name="Light1" type="SpotLight3D" parent="Light_Switch"]
-transform = Transform3D(1, 0, 0, 0, -0.026177, 0.999657, 0, -0.999657, -0.026177, 4.4521, 1.84907, -8.85608)
+[node name="Light1" type="SpotLight3D" parent="Light_Switch1"]
+transform = Transform3D(5.71429, 0, 0, 0, -0.0493906, 1.88615, 0, -4.87638, -0.127693, -12.8893, 3.48881, -25.4737)
 visible = false
 light_energy = 10.374
-spot_range = 8.09261
-spot_angle = 65.64
+spot_range = 9.574
+spot_angle = 74.73
+script = ExtResource("5_pdfly")
+
+[node name="Light_Switch4" parent="." instance=ExtResource("4_pu6hl")]
+transform = Transform3D(0.175, 0, 0, 0, 0.53, 0, 0, 0, 0.205, 6.1748, 6.19433, 3.06265)
+visible = false
+
+[node name="Light1" type="SpotLight3D" parent="Light_Switch4"]
+transform = Transform3D(5.71429, 0, 0, 0, -0.0493906, 1.88615, 0, -4.87638, -0.127693, -12.8893, 3.48881, -25.4737)
+light_energy = 10.374
+spot_range = 9.574
+spot_angle = 74.73
+script = ExtResource("5_pdfly")
+
+[node name="Light_Switch2" parent="." instance=ExtResource("4_pu6hl")]
+transform = Transform3D(0.175, 0, 0, 0, 0.53, 0, 0, 0, 0.205, -14.1223, 2, -10.1245)
+visible = false
+
+[node name="Light2" type="SpotLight3D" parent="Light_Switch2"]
+transform = Transform3D(5.71429, 0, 0, 0, -8.24743e-08, 1.88679, 0, -4.87805, -2.13226e-07, -20.8371, 4.59381, 6.35693)
+light_energy = 5.241
+spot_range = 555.325
+spot_angle = 59.27
+script = ExtResource("3_8b7k5")
+
+[node name="Light_Switch5" parent="." instance=ExtResource("4_pu6hl")]
+transform = Transform3D(0.175, 0, 0, 0, 0.53, 0, 0, 0, 0.205, -14.1223, 6.48446, -10.1245)
+visible = false
+
+[node name="Light2" type="SpotLight3D" parent="Light_Switch5"]
+transform = Transform3D(5.71429, 0, 0, 0, -8.24743e-08, 1.88679, 0, -4.87805, -2.13226e-07, -20.8371, 4.59381, 6.35693)
+light_energy = 5.241
+spot_range = 555.325
+spot_angle = 59.27
+script = ExtResource("3_8b7k5")
+
+[node name="Light_Switch3" parent="." instance=ExtResource("4_pu6hl")]
+transform = Transform3D(0.175, 0, 0, 0, 0.53, 0, 0, 0, 0.205, 8.69486, 2, -12.6771)
+visible = false
+
+[node name="Light3" type="SpotLight3D" parent="Light_Switch3"]
+transform = Transform3D(5.71429, 0, 0, 0, -8.24743e-08, 1.88679, 0, -4.87805, -2.13226e-07, -2.9227, 4.11077, 18.8086)
+light_energy = 1.762
+spot_range = 19.223
+spot_angle = 68.05
+script = ExtResource("4_wy4vt")
+
+[node name="Light_Switch6" parent="." instance=ExtResource("4_pu6hl")]
+transform = Transform3D(0.175, 0, 0, 0, 0.53, 0, 0, 0, 0.205, 8.69486, 6.63194, -12.6771)
+visible = false
+
+[node name="Light3" type="SpotLight3D" parent="Light_Switch6"]
+transform = Transform3D(5.71429, 0, 0, 0, -8.24743e-08, 1.88679, 0, -4.87805, -2.13226e-07, -2.9227, 4.11077, 18.8086)
+light_energy = 1.762
+spot_range = 19.223
+spot_angle = 68.05
+script = ExtResource("4_wy4vt")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_1g846")
+
+[node name="Bed" parent="." instance=ExtResource("8_2mq2g")]
+transform = Transform3D(-0.800907, -0.0803707, -0.467904, -0.0777251, 0.996291, -0.0104718, 0.424979, 0.0307484, -0.883717, -16.0912, 2.77709, -8.86543)
+
+[node name="Bed2" parent="." instance=ExtResource("8_2mq2g")]
+transform = Transform3D(-0.800907, -0.0803707, -0.467904, -0.0777251, 0.996291, -0.0104718, 0.424979, 0.0307484, -0.883717, -16.0912, 7.14391, -8.86543)
