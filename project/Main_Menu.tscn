@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4byxgmgwfon"]
+
+[ext_resource type="Script" path="res://Main_Menu.gd" id="1_aqi6f"]
+
+[node name="Main_Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_aqi6f")
+
+[node name="Start_Game" type="Button" parent="."]
+layout_mode = 0
+offset_left = 478.0
+offset_top = 289.0
+offset_right = 714.0
+offset_bottom = 365.0
+text = "Start Game"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 525.0
+offset_top = 216.0
+offset_right = 802.0
+offset_bottom = 345.0
+text = "Welcome to horror"

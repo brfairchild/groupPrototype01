@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cw4to2o4qudo2"]
+
+[ext_resource type="Script" path="res://fuse.gd" id="1_t0rkh"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_u6nj1"]
+
+[node name="Fuse" type="StaticBody3D"]
+script = ExtResource("1_t0rkh")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.605, 0, 0, 0, 0.25, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_u6nj1")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
