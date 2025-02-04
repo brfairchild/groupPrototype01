@@ -15,9 +15,9 @@ run/main_scene="res://devMap/devMap.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
-[global_group]
+[autoload]
 
-Knobs=""
+Global="*res://global.gd"
 
 [input]
 
