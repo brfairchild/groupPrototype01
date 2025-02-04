@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://c2gl16ylmx3qb"]
 
 [ext_resource type="Script" path="res://devMap/player.gd" id="1_iborm"]
-[ext_resource type="PackedScene" uid="uid://dvwy7gilp136l" path="res://Scenes/interact_ray.tscn" id="2_wewiw"]
+[ext_resource type="Script" path="res://Interactable/interact_ray.gd" id="2_7wyao"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_lo6xf"]
 
@@ -10,6 +10,7 @@ points = PackedVector3Array(-0.125207, -0.532801, -0.480507, 0.0227831, 0.47607,
 
 [node name="MainCharacter" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.50651, 4.87721)
+collision_mask = 3
 script = ExtResource("1_iborm")
 camera = NodePath("Neck/Head")
 
@@ -24,5 +25,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.572358, 0)
 
 [node name="Head" type="Camera3D" parent="Neck"]
 
-[node name="InteractRay" parent="." instance=ExtResource("2_wewiw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49349, 0.12279)
+[node name="RayCast3D" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.499394, 0)
+target_position = Vector3(0, 0, -4)
+collision_mask = 2
+script = ExtResource("2_7wyao")
