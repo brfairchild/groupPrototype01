@@ -1,5 +1,6 @@
 extends CharacterBody3D
-
+class_name Player
+@onready var Light1 = $Light1
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 const MOUSE_SENSITIVITY = 0.008
@@ -31,7 +32,10 @@ func _input(event: InputEvent) -> void:
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-
+	
+	if Input.is_action_just_pressed("interact") and $RayCast3D.is_colliding():
+		print("found you")
+		switch_light()
 	# Jump
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
@@ -56,3 +60,7 @@ func toggle_teleport() -> void:
 		position.y += 5  # Move up
 
 	is_teleported_up = !is_teleported_up  # Toggle state
+
+func switch_light() -> void:
+	if Global.LightValue == 0:
+		$SpotLight3D.visibility == true

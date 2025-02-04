@@ -1,11 +1,10 @@
 extends RayCast3D
 @onready var prompt = $prompt
 
-func _physics_process(_delta):
-	prompt.text = ""
-	
+func process(delta):
 	if is_colliding():
-		var collider = get_collider()
-		
-		if collider is Interactable:
-			prompt.text = "detecting " + collider.name
+		print("pressed")
+		Global.canInteract = true
+		if Input.is_action_just_pressed("interact"):
+			print("pressed")
+			#flipSwitch()

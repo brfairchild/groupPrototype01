@@ -1,9 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://b18otcyh4xu5c"]
+[gd_scene load_steps=8 format=3 uid="uid://b18otcyh4xu5c"]
 
 [ext_resource type="PackedScene" uid="uid://c2gl16ylmx3qb" path="res://Scenes/main_character.tscn" id="1_10ri3"]
 [ext_resource type="Script" path="res://devMap/dev_map.gd" id="1_45w8d"]
 [ext_resource type="PackedScene" uid="uid://ciq53a7k0v2rl" path="res://Scenes/house.tscn" id="3_2tx5t"]
 [ext_resource type="PackedScene" uid="uid://bhmvyfu8g3unk" path="res://Scenes/Light_Switch.tscn" id="4_pu6hl"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_lb0al"]
+sky_top_color = Color(0, 0, 0, 1)
+sky_horizon_color = Color(0.0293206, 8.24841e-06, 0.173839, 1)
+
+[sub_resource type="Sky" id="Sky_cb40q"]
+sky_material = SubResource("ProceduralSkyMaterial_lb0al")
+
+[sub_resource type="Environment" id="Environment_1g846"]
+background_mode = 2
+sky = SubResource("Sky_cb40q")
 
 [node name="DevMap" type="Node3D"]
 script = ExtResource("1_45w8d")
@@ -16,6 +27,15 @@ omni_range = 37.2321
 
 [node name="House" parent="." instance=ExtResource("3_2tx5t")]
 
-[node name="Node3D" parent="." instance=ExtResource("4_pu6hl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 2, 6)
-prompt_message = "HAHAHAHAA"
+[node name="Light_Switch" parent="." instance=ExtResource("4_pu6hl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.43335, 2, 6)
+
+[node name="Light1" type="SpotLight3D" parent="Light_Switch"]
+transform = Transform3D(1, 0, 0, 0, -0.026177, 0.999657, 0, -0.999657, -0.026177, 4.4521, 1.84907, -8.85608)
+visible = false
+light_energy = 10.374
+spot_range = 8.09261
+spot_angle = 65.64
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_1g846")
