@@ -12,7 +12,10 @@ var is_teleported_up = false  # Flag to track teleportation state
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-
+	
+	if Global.power == 5:
+		power_off()
+	
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
 		rotation_y -= event.relative.x * MOUSE_SENSITIVITY
@@ -100,7 +103,6 @@ func switch_light3_off() -> void:
 	Global.power += 1
 
 func power_off() -> void:
-	if Global.power == 5:
-		switch_light1_off()
-		switch_light2_off()
-		switch_light3_off()
+	switch_light1_off()
+	switch_light2_off()
+	switch_light3_off()
