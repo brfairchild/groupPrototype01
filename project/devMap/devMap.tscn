@@ -39,3 +39,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.9912, 0.507933, -12.9664)
 
 [node name="Door5" parent="." instance=ExtResource("6_roe76")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.29458, 0.507933, -12.9664)
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="IntText" type="Label" parent="UI"]
+visible = false
+layout_mode = 0
+offset_left = 297.0
+offset_top = 55.0
+offset_right = 822.0
+offset_bottom = 138.0
+theme_override_font_sizes/font_size = 60
+text = "Press E to Interact"

@@ -24,5 +24,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.572358, 0)
 
 [node name="Head" type="Camera3D" parent="Neck"]
 
-[node name="InteractRay" parent="." instance=ExtResource("2_wewiw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49349, 0.12279)
+[node name="InteractRay" parent="Neck/Head" instance=ExtResource("2_wewiw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0788679, 0.12279)
+collision_mask = 1
