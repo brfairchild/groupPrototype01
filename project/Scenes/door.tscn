@@ -8,16 +8,6 @@
 
 [sub_resource type="BoxMesh" id="BoxMesh_hj7at"]
 
-[sub_resource type="CylinderMesh" id="CylinderMesh_asywc"]
-
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_r3vfp"]
-
-[sub_resource type="SphereMesh" id="SphereMesh_4ejgy"]
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_56y7i"]
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_xxv8a"]
-
 [sub_resource type="Animation" id="Animation_uh725"]
 resource_name = "Open"
 length = 0.6
@@ -74,11 +64,23 @@ _data = {
 "close": SubResource("Animation_dhldj")
 }
 
+[sub_resource type="CylinderMesh" id="CylinderMesh_asywc"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_r3vfp"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_4ejgy"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_56y7i"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_xxv8a"]
+
 [node name="Door" type="Node3D"]
-script = ExtResource("1_tm71i")
 
 [node name="DoorBody" type="StaticBody3D" parent="."]
 transform = Transform3D(-1.47631e-07, 0.218793, -7.63331e-08, 3.3774, 9.55908e-09, -0.00085344, -0.00165059, -9.56843e-09, -1.7463, 0, 1.71732, -0.878138)
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_tm71i")
 
 [node name="DoorCol" type="CollisionShape3D" parent="DoorBody"]
 transform = Transform3D(1, 1.13408e-16, 0, 3.35842e-15, 1, 0, 2.32831e-10, 0, 1, 0, 0, 0)
@@ -91,41 +93,40 @@ material_override = ExtResource("1_qy30l")
 mesh = SubResource("BoxMesh_hj7at")
 skeleton = NodePath("../../..")
 
-[node name="Knob" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.878138)
-
-[node name="BaseMesh" type="MeshInstance3D" parent="Knob"]
-transform = Transform3D(-6.84205e-09, -0.259037, 0, 0.156528, -1.13229e-08, 0, 0, 0, 0.156207, 0, 1.57323, -0.684143)
-material_override = ExtResource("2_6x24a")
-mesh = SubResource("CylinderMesh_asywc")
-skeleton = NodePath("../..")
-
-[node name="BaseBody" type="StaticBody3D" parent="Knob/BaseMesh"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Knob/BaseMesh/BaseBody"]
-shape = SubResource("CylinderShape3D_r3vfp")
-
-[node name="KnobMesh" type="MeshInstance3D" parent="Knob" groups=["Knobs"]]
-transform = Transform3D(0.237545, 0, 0, 0, 0.251, 0, 0, 0, 0.191, 0.265772, 1.57059, -0.698511)
-material_override = ExtResource("2_6x24a")
-mesh = SubResource("SphereMesh_4ejgy")
-
-[node name="KnobBody" type="StaticBody3D" parent="Knob/KnobMesh"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Knob/KnobMesh/KnobBody"]
-shape = SubResource("SphereShape3D_56y7i")
-
-[node name="KnobMesh2" type="MeshInstance3D" parent="Knob" groups=["Knobs"]]
-transform = Transform3D(0.237545, 0, 0, 0, 0.251, 0, 0, 0, 0.191, -0.268588, 1.57059, -0.698511)
-material_override = ExtResource("2_6x24a")
-mesh = SubResource("SphereMesh_4ejgy")
-
-[node name="KnobBody" type="StaticBody3D" parent="Knob/KnobMesh2"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Knob/KnobMesh2/KnobBody"]
-shape = SubResource("SphereShape3D_xxv8a")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="DoorBody"]
+root_node = NodePath("../..")
 libraries = {
 "": SubResource("AnimationLibrary_cf0is")
 }
+
+[node name="BaseMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(-6.84205e-09, -0.259037, 0, 0.156528, -1.13229e-08, 0, 0, 0, 0.156207, 0, 1.57323, -1.56228)
+material_override = ExtResource("2_6x24a")
+mesh = SubResource("CylinderMesh_asywc")
+
+[node name="BaseBody" type="StaticBody3D" parent="BaseMesh"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BaseMesh/BaseBody"]
+shape = SubResource("CylinderShape3D_r3vfp")
+
+[node name="KnobMesh" type="MeshInstance3D" parent="." groups=["Knobs"]]
+transform = Transform3D(0.237545, 0, 0, 0, 0.251, 0, 0, 0, 0.191, 0.265772, 1.57059, -1.57665)
+material_override = ExtResource("2_6x24a")
+mesh = SubResource("SphereMesh_4ejgy")
+skeleton = NodePath("")
+
+[node name="KnobBody" type="StaticBody3D" parent="KnobMesh"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="KnobMesh/KnobBody"]
+shape = SubResource("SphereShape3D_56y7i")
+
+[node name="KnobMesh2" type="MeshInstance3D" parent="." groups=["Knobs"]]
+transform = Transform3D(0.237545, 0, 0, 0, 0.251, 0, 0, 0, 0.191, -0.268588, 1.57059, -1.57665)
+material_override = ExtResource("2_6x24a")
+mesh = SubResource("SphereMesh_4ejgy")
+skeleton = NodePath("")
+
+[node name="KnobBody" type="StaticBody3D" parent="KnobMesh2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="KnobMesh2/KnobBody"]
+shape = SubResource("SphereShape3D_xxv8a")

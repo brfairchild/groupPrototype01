@@ -1,9 +1,11 @@
 extends Node3D
 
-var open = false
+var open
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	open = false
 	pass # Replace with function body.
 
 
@@ -12,6 +14,7 @@ func _process(delta: float) -> void:
 	pass
 
 func interact():
+	print("Interacted")
 	if open == false:
 		$AnimationPlayer.play("Open")
 		open = true

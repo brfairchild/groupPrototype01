@@ -36,22 +36,22 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	
-	if Input.is_action_just_pressed("interact") and $RayCast3D.is_colliding() and Global.LightValue1 == false:
+	if Input.is_action_just_pressed("interact") and $Neck/Head/RayCast3D.is_colliding() and Global.LightValue1 == false:
 		print("found you")
 		switch_light1_on()
-	elif Input.is_action_just_pressed("interact") and $RayCast3D.is_colliding() and Global.LightValue1 == true:
+	elif Input.is_action_just_pressed("interact") and $Neck/Head/RayCast3D.is_colliding() and Global.LightValue1 == true:
 		print("found you")
 		switch_light1_off()
-	if Input.is_action_just_pressed("interact") and $RayCast3D.is_colliding() and Global.LightValue2 == false:
+	if Input.is_action_just_pressed("interact") and $Neck/Head/RayCast3D.is_colliding() and Global.LightValue2 == false:
 		print("found you")
 		switch_light2_on()
-	elif Input.is_action_just_pressed("interact") and $RayCast3D.is_colliding() and Global.LightValue2 == true:
+	elif Input.is_action_just_pressed("interact") and $Neck/Head/RayCast3D.is_colliding() and Global.LightValue2 == true:
 		print("found you")
 		switch_light2_off()
-	if Input.is_action_just_pressed("interact") and $RayCast3D.is_colliding() and Global.LightValue3 == false:
+	if Input.is_action_just_pressed("interact") and $Neck/Head/RayCast3D.is_colliding() and Global.LightValue3 == false:
 		print("found you")
 		switch_light3_on()
-	elif Input.is_action_just_pressed("interact") and $RayCast3D.is_colliding() and Global.LightValue3 == true:
+	elif Input.is_action_just_pressed("interact") and $Neck/Head/RayCast3D.is_colliding() and Global.LightValue3 == true:
 		print("found you")
 		switch_light3_off()
 	# Jump
