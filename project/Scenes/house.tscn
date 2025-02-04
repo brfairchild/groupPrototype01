@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://ciq53a7k0v2rl"]
+[gd_scene load_steps=5 format=3 uid="uid://ciq53a7k0v2rl"]
 
+[ext_resource type="Material" uid="uid://cpafrrr6hq501" path="res://textures/walls.tres" id="1_m12jv"]
 [ext_resource type="PackedScene" uid="uid://dne6jme2n8fv" path="res://Scenes/window.tscn" id="1_s3bbj"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_akcad"]
@@ -98,6 +99,7 @@ shape = SubResource("ConcavePolygonShape3D_b1hgx")
 
 [node name="BedroomWall" type="MeshInstance3D" parent="Walls"]
 transform = Transform3D(-3.58048e-07, 0.423475, -5.027e-07, 8.19118, 1.85016e-08, -0.00562043, -0.00400315, -1.85197e-08, -11.5004, -25.4959, 4.0415, -5.19389)
+material_override = ExtResource("1_m12jv")
 mesh = SubResource("BoxMesh_akcad")
 
 [node name="BRWBody" type="StaticBody3D" parent="Walls/BedroomWall"]
@@ -107,6 +109,7 @@ shape = SubResource("ConcavePolygonShape3D_b1hgx")
 
 [node name="BedroomWall2" type="MeshInstance3D" parent="Walls"]
 transform = Transform3D(-3.57921e-07, 0.423475, -1.65241e-07, 8.18828, 1.85016e-08, -0.00184748, -0.00400173, -1.85197e-08, -3.78028, -25.4959, 4.0415, -14.7068)
+material_override = ExtResource("1_m12jv")
 mesh = SubResource("BoxMesh_akcad")
 
 [node name="BRWBody" type="StaticBody3D" parent="Walls/BedroomWall2"]
@@ -116,6 +119,7 @@ shape = SubResource("ConcavePolygonShape3D_b1hgx")
 
 [node name="BedroomWall3" type="MeshInstance3D" parent="Walls"]
 transform = Transform3D(-3.57898e-07, 0.423475, -1.43626e-07, 8.18773, 1.85016e-08, -0.0016058, -0.00400147, -1.85197e-08, -3.28577, -25.4959, 4.0415, 4.08274)
+material_override = ExtResource("1_m12jv")
 mesh = SubResource("BoxMesh_akcad")
 
 [node name="BRWBody" type="StaticBody3D" parent="Walls/BedroomWall3"]
@@ -125,6 +129,7 @@ shape = SubResource("ConcavePolygonShape3D_b1hgx")
 
 [node name="BedroomWall4" type="MeshInstance3D" parent="Walls"]
 transform = Transform3D(-1.24982e-09, 1.85106e-08, 11.5004, 8.19114, 0.0014782, 0, -0.0285924, 0.423472, -5.027e-07, -19.5798, 4.018, -3.22593)
+material_override = ExtResource("1_m12jv")
 mesh = SubResource("BoxMesh_akcad")
 
 [node name="BRWBody" type="StaticBody3D" parent="Walls/BedroomWall4"]
@@ -134,6 +139,7 @@ shape = SubResource("ConcavePolygonShape3D_b1hgx")
 
 [node name="BedroomWall5" type="MeshInstance3D" parent="Walls"]
 transform = Transform3D(-3.58048e-07, 0.423475, -5.027e-07, 8.19118, 1.85016e-08, -0.00562043, -0.00400315, -1.85197e-08, -11.5004, -13.92, 4.0415, -5.19389)
+material_override = ExtResource("1_m12jv")
 mesh = SubResource("BoxMesh_akcad")
 
 [node name="BRWBody" type="StaticBody3D" parent="Walls/BedroomWall5"]
@@ -143,6 +149,7 @@ shape = SubResource("ConcavePolygonShape3D_b1hgx")
 
 [node name="BedroomWall6" type="MeshInstance3D" parent="Walls"]
 transform = Transform3D(-1.27831e-09, 1.89326e-08, 21.859, 8.37787, 0.0015119, 0, -0.0292443, 0.433126, -9.55487e-07, -14.8555, 4.0415, 5.50997)
+material_override = ExtResource("1_m12jv")
 mesh = SubResource("BoxMesh_akcad")
 
 [node name="BRWBody" type="StaticBody3D" parent="Walls/BedroomWall6"]
@@ -152,6 +159,7 @@ shape = SubResource("ConcavePolygonShape3D_b1hgx")
 
 [node name="BedroomWall7" type="MeshInstance3D" parent="Walls"]
 transform = Transform3D(-3.58172e-07, 0.423475, -8.59491e-07, 8.19403, 1.85016e-08, -0.00960952, -0.00400454, -1.85197e-08, -19.6629, -9.04996, 4.0415, -6.7706)
+material_override = ExtResource("1_m12jv")
 mesh = SubResource("BoxMesh_akcad")
 
 [node name="BRWBody" type="StaticBody3D" parent="Walls/BedroomWall7"]
@@ -161,6 +169,7 @@ shape = SubResource("ConcavePolygonShape3D_b1hgx")
 
 [node name="BedroomWall8" type="MeshInstance3D" parent="Walls"]
 transform = Transform3D(1.56452e-14, 1.85107e-08, 4.09907, 8.18828, -1.85107e-08, 0, 3.57921e-07, 0.423475, -1.79176e-07, -23.3136, 4.0415, -16.3996)
+material_override = ExtResource("1_m12jv")
 mesh = SubResource("BoxMesh_akcad")
 
 [node name="BRWBody" type="StaticBody3D" parent="Walls/BedroomWall8"]
@@ -170,6 +179,7 @@ shape = SubResource("ConcavePolygonShape3D_b1hgx")
 
 [node name="BedroomWall9" type="MeshInstance3D" parent="Walls"]
 transform = Transform3D(1.56452e-14, 1.85107e-08, 7.1542, 8.18828, -1.85107e-08, 0, 3.57921e-07, 0.423475, -3.1272e-07, -15.8666, 4.0415, -16.3996)
+material_override = ExtResource("1_m12jv")
 mesh = SubResource("BoxMesh_akcad")
 
 [node name="BRWBody" type="StaticBody3D" parent="Walls/BedroomWall9"]
@@ -179,6 +189,7 @@ shape = SubResource("ConcavePolygonShape3D_b1hgx")
 
 [node name="BedroomWall10" type="MeshInstance3D" parent="Walls"]
 transform = Transform3D(1.56452e-14, 1.85107e-08, 7.1542, 8.18828, -1.85107e-08, 0, 3.57921e-07, 0.423475, -3.1272e-07, -6.83966, 4.0415, -16.3996)
+material_override = ExtResource("1_m12jv")
 mesh = SubResource("BoxMesh_akcad")
 
 [node name="BRWBody" type="StaticBody3D" parent="Walls/BedroomWall10"]
@@ -188,6 +199,7 @@ shape = SubResource("ConcavePolygonShape3D_b1hgx")
 
 [node name="BedroomWall11" type="MeshInstance3D" parent="Walls"]
 transform = Transform3D(-3.57921e-07, 0.423475, -1.65241e-07, 8.18828, 1.85016e-08, -0.00184748, -0.00400173, -1.85197e-08, -3.78028, -13.9458, 4.05258, -14.5771)
+material_override = ExtResource("1_m12jv")
 mesh = SubResource("BoxMesh_akcad")
 
 [node name="BRWBody" type="StaticBody3D" parent="Walls/BedroomWall11"]
@@ -197,6 +209,7 @@ shape = SubResource("ConcavePolygonShape3D_b1hgx")
 
 [node name="BedroomWall12" type="MeshInstance3D" parent="Walls"]
 transform = Transform3D(-3.58172e-07, 0.423475, -8.59491e-07, 8.19403, 1.85016e-08, -0.00960952, -0.00400454, -1.85197e-08, -19.6629, 6.38319, 4.0415, -4.15732)
+material_override = ExtResource("1_m12jv")
 mesh = SubResource("BoxMesh_akcad")
 
 [node name="BRWBody" type="StaticBody3D" parent="Walls/BedroomWall12"]
@@ -206,6 +219,7 @@ shape = SubResource("ConcavePolygonShape3D_b1hgx")
 
 [node name="BedroomWall13" type="MeshInstance3D" parent="Walls"]
 transform = Transform3D(1.56452e-14, 1.85107e-08, 21.1183, 8.18828, -1.85107e-08, 0, 3.57921e-07, 0.423475, -9.23111e-07, 12.9167, 4.0415, -16.3996)
+material_override = ExtResource("1_m12jv")
 mesh = SubResource("BoxMesh_akcad")
 
 [node name="BRWBody" type="StaticBody3D" parent="Walls/BedroomWall13"]
@@ -215,6 +229,7 @@ shape = SubResource("ConcavePolygonShape3D_b1hgx")
 
 [node name="BedroomWall14" type="MeshInstance3D" parent="Walls"]
 transform = Transform3D(-3.57903e-07, 0.423475, -1.48336e-07, 8.18786, 1.85016e-08, -0.00165847, -0.00400153, -1.85197e-08, -3.39353, -13.7251, 4.0415, 3.94351)
+material_override = ExtResource("1_m12jv")
 mesh = SubResource("BoxMesh_akcad")
 
 [node name="BRWBody" type="StaticBody3D" parent="Walls/BedroomWall14"]
@@ -224,6 +239,7 @@ shape = SubResource("ConcavePolygonShape3D_b1hgx")
 
 [node name="BedroomWall15" type="MeshInstance3D" parent="Walls"]
 transform = Transform3D(1.56452e-14, 1.88018e-08, 13.008, 8.18828, -1.88018e-08, 0, 3.57921e-07, 0.430136, -5.68596e-07, 14.7607, 4.01864, -12.8614)
+material_override = ExtResource("1_m12jv")
 mesh = SubResource("BoxMesh_akcad")
 
 [node name="BRWBody" type="StaticBody3D" parent="Walls/BedroomWall15"]
@@ -233,6 +249,7 @@ shape = SubResource("ConcavePolygonShape3D_b1hgx")
 
 [node name="BedroomWall16" type="MeshInstance3D" parent="Walls"]
 transform = Transform3D(-3.582e-07, 0.423475, -9.9853e-07, 8.19468, 1.85016e-08, -0.011164, -0.00400486, -1.85197e-08, -22.8437, 23.1358, 4.0415, -5.75468)
+material_override = ExtResource("1_m12jv")
 mesh = SubResource("BoxMesh_akcad")
 
 [node name="BRWBody" type="StaticBody3D" parent="Walls/BedroomWall16"]
@@ -242,6 +259,7 @@ shape = SubResource("ConcavePolygonShape3D_b1hgx")
 
 [node name="BedroomWall17" type="MeshInstance3D" parent="Walls"]
 transform = Transform3D(1.56452e-14, 1.88018e-08, 7.47335, 8.18828, -1.88018e-08, 0, 3.57921e-07, 0.430136, -3.2667e-07, 10.0351, 4.01864, -5.61633)
+material_override = ExtResource("1_m12jv")
 mesh = SubResource("BoxMesh_akcad")
 
 [node name="BRWBody" type="StaticBody3D" parent="Walls/BedroomWall17"]
@@ -251,6 +269,7 @@ shape = SubResource("ConcavePolygonShape3D_b1hgx")
 
 [node name="BedroomWall18" type="MeshInstance3D" parent="Walls"]
 transform = Transform3D(-3.57921e-07, -0.430136, 0, 8.18828, -1.88018e-08, 0, 0, 0, 7.47335, 13.5532, 4.01864, -9.16206)
+material_override = ExtResource("1_m12jv")
 mesh = SubResource("BoxMesh_akcad")
 
 [node name="BRWBody" type="StaticBody3D" parent="Walls/BedroomWall18"]
@@ -260,6 +279,7 @@ shape = SubResource("ConcavePolygonShape3D_b1hgx")
 
 [node name="BedroomWall19" type="MeshInstance3D" parent="Walls"]
 transform = Transform3D(-1.27831e-09, 1.89326e-08, 16.9768, 8.37787, 0.0015119, 0, -0.0292443, 0.433126, -7.42079e-07, 14.8156, 4.0415, 5.50997)
+material_override = ExtResource("1_m12jv")
 mesh = SubResource("BoxMesh_akcad")
 
 [node name="BRWBody" type="StaticBody3D" parent="Walls/BedroomWall19"]
@@ -269,6 +289,7 @@ shape = SubResource("ConcavePolygonShape3D_b1hgx")
 
 [node name="BedroomWall20" type="MeshInstance3D" parent="Walls"]
 transform = Transform3D(-3.58048e-07, 0.423475, -5.027e-07, 8.19118, 1.85016e-08, -0.00562043, -0.00400315, -1.85197e-08, -11.5004, 6.33927, 4.0415, 10.814)
+material_override = ExtResource("1_m12jv")
 mesh = SubResource("BoxMesh_akcad")
 
 [node name="BRWBody" type="StaticBody3D" parent="Walls/BedroomWall20"]
@@ -278,6 +299,7 @@ shape = SubResource("ConcavePolygonShape3D_b1hgx")
 
 [node name="BedroomWall21" type="MeshInstance3D" parent="Walls"]
 transform = Transform3D(1.56452e-14, 1.88018e-08, 4.50244, 8.18828, -1.88018e-08, 0, 3.57921e-07, 0.430136, -1.96808e-07, 4.53258, 4.01864, 16.4457)
+material_override = ExtResource("1_m12jv")
 mesh = SubResource("BoxMesh_akcad")
 
 [node name="BRWBody" type="StaticBody3D" parent="Walls/BedroomWall21"]
@@ -287,6 +309,7 @@ shape = SubResource("ConcavePolygonShape3D_b1hgx")
 
 [node name="BedroomWall22" type="MeshInstance3D" parent="Walls"]
 transform = Transform3D(1.56452e-14, 1.88018e-08, 5.16643, 8.18828, -1.88018e-08, 0, 3.57921e-07, 0.430136, -2.25832e-07, -5.83404, 4.01864, 16.4457)
+material_override = ExtResource("1_m12jv")
 mesh = SubResource("BoxMesh_akcad")
 
 [node name="BRWBody" type="StaticBody3D" parent="Walls/BedroomWall22"]
@@ -296,6 +319,7 @@ shape = SubResource("ConcavePolygonShape3D_b1hgx")
 
 [node name="BedroomWall23" type="MeshInstance3D" parent="Walls"]
 transform = Transform3D(-3.57921e-07, -0.430136, 0, 8.18828, -1.88018e-08, 0, 0, 0, 4.31213, -8.31091, 4.01864, 14.0969)
+material_override = ExtResource("1_m12jv")
 mesh = SubResource("BoxMesh_akcad")
 
 [node name="BRWBody" type="StaticBody3D" parent="Walls/BedroomWall23"]
@@ -305,6 +329,7 @@ shape = SubResource("ConcavePolygonShape3D_b1hgx")
 
 [node name="BedroomWall24" type="MeshInstance3D" parent="Walls"]
 transform = Transform3D(-3.57921e-07, -0.430136, 0, 8.18828, -1.88018e-08, 0, 0, 0, 4.5872, -8.31091, 4.01864, 8.00439)
+material_override = ExtResource("1_m12jv")
 mesh = SubResource("BoxMesh_akcad")
 
 [node name="BRWBody" type="StaticBody3D" parent="Walls/BedroomWall24"]
