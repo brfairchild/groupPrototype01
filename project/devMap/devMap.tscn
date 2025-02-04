@@ -28,12 +28,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 omni_range = 37.2321
 
 [node name="MainCharacter" parent="." instance=ExtResource("1_10ri3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.5746, 1.91951, -5.00641)
 
 [node name="House" parent="." instance=ExtResource("3_2tx5t")]
 
 [node name="Light_Switch1" parent="." instance=ExtResource("4_pu6hl")]
 transform = Transform3D(0.175, 0, 0, 0, 0.53, 0, 0, 0, 0.205, 6.1748, 2, 3.06265)
-visible = false
 
 [node name="Light1" type="SpotLight3D" parent="Light_Switch1"]
 transform = Transform3D(5.71429, 0, 0, 0, -0.0493906, 1.88615, 0, -4.87638, -0.127693, -12.8893, 3.48881, -25.4737)
@@ -45,7 +45,6 @@ script = ExtResource("5_pdfly")
 
 [node name="Light_Switch4" parent="." instance=ExtResource("4_pu6hl")]
 transform = Transform3D(0.175, 0, 0, 0, 0.53, 0, 0, 0, 0.205, 6.1748, 6.19433, 3.06265)
-visible = false
 
 [node name="Light1" type="SpotLight3D" parent="Light_Switch4"]
 transform = Transform3D(5.71429, 0, 0, 0, -0.0493906, 1.88615, 0, -4.87638, -0.127693, -12.8893, 3.48881, -25.4737)
@@ -56,10 +55,10 @@ script = ExtResource("5_pdfly")
 
 [node name="Light_Switch2" parent="." instance=ExtResource("4_pu6hl")]
 transform = Transform3D(0.175, 0, 0, 0, 0.53, 0, 0, 0, 0.205, -14.1223, 2, -10.1245)
-visible = false
 
 [node name="Light2" type="SpotLight3D" parent="Light_Switch2"]
 transform = Transform3D(5.71429, 0, 0, 0, -8.24743e-08, 1.88679, 0, -4.87805, -2.13226e-07, -20.8371, 4.59381, 6.35693)
+visible = false
 light_energy = 5.241
 spot_range = 555.325
 spot_angle = 59.27
@@ -67,10 +66,10 @@ script = ExtResource("3_8b7k5")
 
 [node name="Light_Switch5" parent="." instance=ExtResource("4_pu6hl")]
 transform = Transform3D(0.175, 0, 0, 0, 0.53, 0, 0, 0, 0.205, -14.1223, 6.48446, -10.1245)
-visible = false
 
 [node name="Light2" type="SpotLight3D" parent="Light_Switch5"]
 transform = Transform3D(5.71429, 0, 0, 0, -8.24743e-08, 1.88679, 0, -4.87805, -2.13226e-07, -20.8371, 4.59381, 6.35693)
+visible = false
 light_energy = 5.241
 spot_range = 555.325
 spot_angle = 59.27
@@ -78,10 +77,10 @@ script = ExtResource("3_8b7k5")
 
 [node name="Light_Switch3" parent="." instance=ExtResource("4_pu6hl")]
 transform = Transform3D(0.175, 0, 0, 0, 0.53, 0, 0, 0, 0.205, 8.69486, 2, -12.6771)
-visible = false
 
 [node name="Light3" type="SpotLight3D" parent="Light_Switch3"]
 transform = Transform3D(5.71429, 0, 0, 0, -8.24743e-08, 1.88679, 0, -4.87805, -2.13226e-07, -2.9227, 4.11077, 18.8086)
+visible = false
 light_energy = 1.762
 spot_range = 19.223
 spot_angle = 68.05
@@ -89,10 +88,10 @@ script = ExtResource("4_wy4vt")
 
 [node name="Light_Switch6" parent="." instance=ExtResource("4_pu6hl")]
 transform = Transform3D(0.175, 0, 0, 0, 0.53, 0, 0, 0, 0.205, 8.69486, 6.63194, -12.6771)
-visible = false
 
 [node name="Light3" type="SpotLight3D" parent="Light_Switch6"]
 transform = Transform3D(5.71429, 0, 0, 0, -8.24743e-08, 1.88679, 0, -4.87805, -2.13226e-07, -2.9227, 4.11077, 18.8086)
+visible = false
 light_energy = 1.762
 spot_range = 19.223
 spot_angle = 68.05
